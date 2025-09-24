@@ -1,0 +1,357 @@
+:root {
+    --primary-color: #0052CC;
+    --secondary-color: #FF5630;
+    --accent-color: #36B37E;
+    --text-color: #172B4D;
+    --text-light: #6B778C;
+    --background: #FAFBFC;
+    --white: #FFFFFF;
+    --shadow: 0 8px 32px rgba(9, 30, 66, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--background) 0%, #E6FCFF 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.slide-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.slide-content {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    max-width: 1200px;
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.slide-header {
+    background: linear-gradient(90deg, var(--primary-color) 0%, #004494 100%);
+    color: var(--white);
+    padding: 2rem;
+    position: relative;
+}
+
+.slide-number {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.slide-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.slide-main {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide-main h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.slide-main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.25rem;
+    color: var(--primary-color);
+}
+
+.slide-main h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.slide-main p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.slide-main ul, .slide-main ol {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.slide-main li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.slide-main strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.slide-main em {
+    color: var(--secondary-color);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.slide-main code {
+    background: #F4F5F7;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Menlo', monospace;
+    font-size: 0.9em;
+}
+
+.slide-main pre {
+    background: #F4F5F7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.slide-main blockquote {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--text-light);
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #FFF4E6 0%, #FFE0B2 100%);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Support for Kramdown attribute lists */
+p.highlight-box {
+    background: linear-gradient(135deg, #FFF4E6 0%, #FFE0B2 100%);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+}
+
+/* Two column support - simplified approach */
+.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin: 2rem 0;
+}
+
+.col-left, .col-right {
+    margin: 0;
+    padding: 0;
+}
+
+.col-left h3, .col-left h4,
+.col-right h3, .col-right h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.col-left ul, .col-left ol,
+.col-right ul, .col-right ol {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.col-left li, .col-right li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* Alternative: Use table-based layout for better Markdown compatibility */
+.comparison-table {
+    display: table;
+    width: 100%;
+    margin: 2rem 0;
+    border-spacing: 3rem 0;
+}
+
+.comparison-col {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+}
+
+.comparison-col h3, .comparison-col h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.comparison-col ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.comparison-col li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* Legacy support for existing classes */
+ul.two-column, ol.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    list-style: none;
+    padding: 0;
+}
+
+ul.two-column li, ol.two-column li {
+    margin-bottom: 0.75rem;
+}
+
+/* Two column with headers */
+ul.two-column li:first-child,
+ol.two-column li:first-child {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.slide-footer {
+    background: #F4F5F7;
+    padding: 1.5rem 3rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.nav-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 82, 204, 0.3);
+}
+
+.home-btn {
+    background: var(--text-light);
+}
+
+.home-btn:hover {
+    background: var(--text-color);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: #DFE1E6;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color) 0%, #36B37E 100%);
+    transition: width 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .slide-container {
+        padding: 1rem;
+    }
+    
+    .slide-title {
+        font-size: 2rem;
+    }
+    
+    .slide-main {
+        padding: 2rem;
+    }
+    
+    .slide-main h1 {
+        font-size: 1.8rem;
+    }
+    
+    .slide-main p {
+        font-size: 1.1rem;
+    }
+    
+    .two-column-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .slide-footer {
+        padding: 1rem 2rem;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

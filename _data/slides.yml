@@ -1,0 +1,26 @@
+total: 8
+slides:
+  - number: 1
+    title: "DevEx V2: From Scripts to Intelligent Systems"
+    path: "/slide-01"
+  - number: 2
+    title: "DevOps Evolution"
+    path: "/slide-02"
+  - number: 3
+    title: "The LLM Revolution: Welcome to DevOps V2"
+    path: "/slide-03"
+  - number: 4
+    title: "LLM in Action: Smart Pipelines & Incident Response"
+    path: "/slide-04"
+  - number: 5
+    title: "Developer Experience & Security in the LLM Era"
+    path: "/slide-05"
+  - number: 6
+    title: "Real-World LLM DevOps Examples"
+    path: "/slide-06"
+  - number: 7
+    title: "Challenges & Opportunities Ahead"
+    path: "/slide-07"
+  - number: 8
+    title: "Let's Explore & Discuss Together"
+    path: "/slide-08"

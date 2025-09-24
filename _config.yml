@@ -1,0 +1,43 @@
+title: "DevEx V2: From Scripts to Intelligent Systems"
+description: "A presentation on the impact of ML and LLMs on DevOps and Developer Experience"
+author: "Claudiu"
+email: "eu@claudiu.cloud"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# GitHub Pages settings
+baseurl: ""
+url: "https://ygdrax.github.io/devex"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections for slides
+collections:
+  slides:
+    output: true
+    permalink: /:name/
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Default layout for slides
+defaults:
+  - scope:
+      path: "_slides"
+      type: "slides"
+    values:
+      layout: "slide"

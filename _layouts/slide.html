@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/slide.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slide-content">
+            <header class="slide-header">
+                {% if page.slide_number %}
+                <div class="slide-number">{{ page.slide_number }}</div>
+                {% endif %}
+                {% if page.title %}
+                <h1 class="slide-title">{{ page.title }}</h1>
+                {% endif %}
+            </header>
+            
+            <main class="slide-main">
+                {{ content }}
+            </main>
+            
+            <footer class="slide-footer">
+                <div class="navigation">
+                    {% if page.prev_slide %}
+                    <a href="{{ page.prev_slide | relative_url }}" class="nav-btn prev-btn">← Previous</a>
+                    {% endif %}
+                    
+                    <a href="{{ '/' | relative_url }}" class="nav-btn home-btn">Home</a>
+                    
+                    {% if page.next_slide %}
+                    <a href="{{ page.next_slide | relative_url }}" class="nav-btn next-btn">Next →</a>
+                    {% endif %}
+                </div>
+                
+                <div class="progress-bar">
+                    {% if page.slide_number and site.data.slides %}
+                    <div class="progress" style="width: {{ page.slide_number | times: 100 | divided_by: site.data.slides.total }}%"></div>
+                    {% endif %}
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <script>
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                const prevBtn = document.querySelector('.prev-btn');
+                if (prevBtn) prevBtn.click();
+            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+                e.preventDefault();
+                const nextBtn = document.querySelector('.next-btn');
+                if (nextBtn) nextBtn.click();
+            } else if (e.key === 'Home') {
+                const homeBtn = document.querySelector('.home-btn');
+                if (homeBtn) homeBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>

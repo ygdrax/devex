@@ -1,0 +1,78 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/slide.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .presentation-home {
+            background: linear-gradient(135deg, #0052CC 0%, #004494 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .home-content {
+            max-width: 800px;
+            background: white;
+            color: #333;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .home-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .home-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .home-description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+        .start-btn {
+            background: #FF5630;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .start-btn:hover {
+            background: #FF7452;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 86, 48, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-home">
+        <div class="home-content">
+            <h1 class="home-title">DevEx Evolution</h1>
+            <h2 class="home-subtitle">From Scripts to Intelligent Systems</h2>
+            <p class="home-description">
+                Exploring how ML and Lasrge Language Models are reshaping DevOps and Developer Experience
+            </p>
+            
+            <a href="{{ '/slide-01/' | relative_url }}" class="start-btn">Start Presentation →</a>
+        </div>
+    </div>
+</body>
+</html>
