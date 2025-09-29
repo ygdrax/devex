@@ -47,6 +47,6 @@ DevOps fundamentally transformed software development by breaking down silos and
 </div>
 </div>
 
-**But DevOps V1 has limitations:** Brittle scripts, manual intervention still needed, reactive problem-solving, and limited adaptability.
+**But DevOps V1 has limitations:** Fragile scripts, manual intervention still needed, reactive problem-solving, and limited adaptability.
 
 > V1 scaled automation. It didn't scale *decisions*.

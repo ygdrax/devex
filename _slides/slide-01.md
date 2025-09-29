@@ -10,7 +10,7 @@ next_slide: "/slide-02"
 - **The DevOps Journey** - From manual processes to intelligent automation
 - **DevOps V1** - Traditional scripted automation and its limitations
 - **The LLM Revolution** - How LLMs are changing everything
-- **DevOps V2** - ML-driven, self-healing, predictive systems
+- **DevOps V2** - ML-driven, self-healing*, predictive systems
 - **Live** - build a *GitScraper* in ~10 minutes (Claude Code + Copilot + CodeRabbit)
 
 ### WHO am I?
