@@ -45,3 +45,5 @@ LLM transforms both developer productivity, creating powerful capabilities while
 
 </div>
 </div>
+
+> The "S" in AI stands for Security.
